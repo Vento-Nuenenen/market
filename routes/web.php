@@ -13,10 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function () {
+    Route::get('/overwatch', [App\Http\Controllers\Backend\OverwatchController::class, 'index'])->name('overwatch');
+});
+
+Route::get('/', 'Frontend\MarketController@index')->name('market');
+Route::get('/market/{mid}', [App\Http\Controllers\Frontend\MarketController::class, 'show']);
