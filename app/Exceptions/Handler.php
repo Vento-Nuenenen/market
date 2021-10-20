@@ -2,6 +2,7 @@
 
 namespace App\Exceptions;
 
+use App;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
 
@@ -26,6 +27,27 @@ class Handler extends ExceptionHandler
         'password',
         'password_confirmation',
     ];
+
+    /**
+     * Report or log an exception.
+     *
+     * @param Throwable $exception
+     * @return void
+     *
+     * @throws \Exception
+     */
+    public function report(Throwable $exception)
+    {
+        if (App::environment('production')) {
+            if ($this->shouldReport($exception)) {
+                $airbrakeNotifier = App::make('Airbrake\Notifier');
+                $airbrakeNotifier->notify($exception);
+            }
+        }
+
+        parent::report($exception);
+    }
+
 
     /**
      * Register the exception handling callbacks for the application.
