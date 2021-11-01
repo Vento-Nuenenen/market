@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel, to provide autocomplete information to your IDE
- * Generated for Laravel 8.68.0.
+ * Generated for Laravel 8.68.1.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -9078,6 +9078,18 @@
         {
                         /** @var \Illuminate\Cache\RateLimiter $instance */
                         return $instance->availableIn($key);
+        }
+                    /**
+         * Clean the rate limiter key from unicode characters.
+         *
+         * @param string $key
+         * @return string 
+         * @static 
+         */ 
+        public static function cleanRateLimiterKey($key)
+        {
+                        /** @var \Illuminate\Cache\RateLimiter $instance */
+                        return $instance->cleanRateLimiterKey($key);
         }
          
     }
