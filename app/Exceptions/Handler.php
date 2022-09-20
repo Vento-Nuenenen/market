@@ -31,7 +31,7 @@ class Handler extends ExceptionHandler
     /**
      * Report or log an exception.
      *
-     * @param Throwable $exception
+     * @param  Throwable  $exception
      * @return void
      *
      * @throws \Exception
@@ -47,7 +47,6 @@ class Handler extends ExceptionHandler
 
         parent::report($exception);
     }
-
 
     /**
      * Register the exception handling callbacks for the application.
