@@ -5,10 +5,9 @@
         "build": "vite build"
     },
     "devDependencies": {
+        "@popperjs/core": "^2.11.5",
         "axios": "^1.1",
-        "bootstrap": "^4.6.2",
-        "bootstrap-select": "^1.13.18",
-        "bootstrap4-toggle": "^3.6.1",
+        "bootstrap": "^5.2.2",
         "dropzone": "^5.9.3",
         "font-awesome": "^4.7.0",
         "jquery": "^3.6",
