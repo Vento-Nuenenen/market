@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function () {
+    Route::redirect('/', '/admin/overwatch');
     Route::get('/overwatch', [App\Http\Controllers\Backend\OverwatchController::class, 'index'])->name('overwatch');
 });
 
