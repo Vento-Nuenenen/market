@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Backend\OverwatchController;
+use App\Http\Controllers\Backend\UsersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +19,16 @@ Auth::routes();
 
 Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function () {
     Route::redirect('/', '/admin/overwatch');
-    Route::get('/overwatch', [App\Http\Controllers\Backend\OverwatchController::class, 'index'])->name('overwatch');
+    Route::get('/overwatch', [OverwatchController::class, 'index'])->name('overwatch');
+
+    Route::any('/users', [UsersController::class, 'index'])->name('users');
+    Route::get('/users/add', 'Backend\UsersController@create')->name('add-users');
+    Route::post('/users/store', 'Backend\UsersController@store')->name('store-users');
+    Route::get('/users/edit/{uid}', 'Backend\UsersController@edit')->name('edit-users');
+    Route::post('/users/update/{uid}', 'Backend\UsersController@update')->name('update-users');
+    Route::get('/users/destroy/{uid}', 'Backend\UsersController@destroy')->name('destroy-users');
+
+    Route::resource('profile', 'Backend\ProfileController')->only('index', 'update');
 });
 
 Route::get('/', 'Frontend\MarketController@index')->name('market');
