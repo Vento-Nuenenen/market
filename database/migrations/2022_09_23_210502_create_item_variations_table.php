@@ -15,9 +15,7 @@ return new class extends Migration
     {
         Schema::create('item_variations', function (Blueprint $table) {
             $table->id();
-            $table->string('variation_group');
-            $table->string('name');
-            $table->string('slug');
+            $table->foreignId('style_id');
             $table->integer('warehouse')->nullable();
             $table->foreignId('size_id');
             $table->foreignId('color_id');
