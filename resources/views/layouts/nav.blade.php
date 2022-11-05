@@ -12,13 +12,7 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link {{ Request::is('/')}}" href="{{ url('/') }}">
-                        Gefunden
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link {{ Request::is('sell/')}}" href="{{ url('/sell') }}">
-                        Verkauf
+                        Shop
                     </a>
                 </li>
             </ul>
@@ -39,6 +33,18 @@
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sales
+                        </a>
+
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item {{ Request::is('admin/users/')}}" href="{{ url('/admin/users') }}">
+                                Bestellungen
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Konfiguration
                         </a>
 
@@ -50,24 +56,19 @@
                             <a class="dropdown-item {{ Request::is('admin/groups/')}}" href="{{ url('/admin/groups') }}">
                                 Item Gruppen
                             </a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item {{ Request::is('admin/events/')}}" href="{{ url('/admin/events') }}">
-                                Item Events
-                            </a>
-                            <div class="dropdown-divider"></div>
                             <a class="dropdown-item {{ Request::is('admin/items/')}}" href="{{ url('/admin/items') }}">
                                 Items
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item {{ Request::is('admin/claims/')}}" href="{{ url('/admin/claims') }}">
-                                Anfragen
+                            <a class="dropdown-item {{ Request::is('admin/items/')}}" href="{{ url('/admin/items') }}">
+                                Farben
                             </a>
                         </div>
                     </li>
 
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->scout_name }} <span class="caret"></span>
+                            {{ Auth::user()->scoutname }} <span class="caret"></span>
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
