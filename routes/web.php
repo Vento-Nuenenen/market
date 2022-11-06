@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Backend\OrdersController;
 use App\Http\Controllers\Backend\OverwatchController;
 use App\Http\Controllers\Backend\UsersController;
 use Illuminate\Support\Facades\Route;
@@ -28,12 +29,12 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function () {
     Route::post('/users/update/{uid}', [UsersController::class, 'update'])->name('update-users');
     Route::get('/users/destroy/{uid}', [UsersController::class, 'destroy'])->name('destroy-users');
 
-    Route::any('/orders', [UsersController::class, 'index'])->name('users');
-    Route::get('/orders/add', 'Backend\UsersController@create')->name('add-users');
-    Route::post('/orders/store', 'Backend\UsersController@store')->name('store-users');
-    Route::get('/orders/edit/{uid}', 'Backend\UsersController@edit')->name('edit-users');
-    Route::post('/orders/update/{uid}', 'Backend\UsersController@update')->name('update-users');
-    Route::get('/orders/destroy/{uid}', 'Backend\UsersController@destroy')->name('destroy-users');
+    Route::any('/orders', [OrdersController::class, 'index'])->name('orders');
+    Route::get('/orders/add', [OrdersController::class, 'create'])->name('add-orders');
+    Route::post('/orders/store', [OrdersController::class, 'store'])->name('store-orders');
+    Route::get('/orders/edit/{uid}', [OrdersController::class, 'edit'])->name('edit-orders');
+    Route::post('/orders/update/{uid}', [OrdersController::class, 'update'])->name('update-orders');
+    Route::get('/orders/destroy/{uid}', [OrdersController::class, 'destroy'])->name('destroy-orders');
 
     Route::resource('profile', 'Backend\ProfileController')->only('index', 'update');
 });
