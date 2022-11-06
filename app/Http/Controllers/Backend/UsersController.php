@@ -52,9 +52,9 @@ class UsersController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        $scout_name = $request->input('scout_name');
-        $first_name = $request->input('first_name');
-        $last_name = $request->input('last_name');
+        $scout_name = $request->input('scoutname');
+        $first_name = $request->input('firstname');
+        $last_name = $request->input('lastname');
         $email = $request->input('email');
 
         $password = $request->input('password');
@@ -65,9 +65,9 @@ class UsersController extends Controller
             $password_repeat = null;
 
             User::create([
-                'scout_name' => $scout_name,
-                'first_name' => $first_name,
-                'last_name' => $last_name,
+                'scoutname' => $scout_name,
+                'firstname' => $first_name,
+                'lastname' => $last_name,
                 'email' => $email,
                 'password' => $password,
             ]);
@@ -100,9 +100,9 @@ class UsersController extends Controller
      */
     public function update(Request $request, $uid): RedirectResponse
     {
-        $scout_name = $request->input('scout_name');
-        $first_name = $request->input('first_name');
-        $last_name = $request->input('last_name');
+        $scout_name = $request->input('scoutname');
+        $first_name = $request->input('firstname');
+        $last_name = $request->input('lastname');
         $email = $request->input('email');
 
         $password = $request->input('password');
@@ -113,9 +113,9 @@ class UsersController extends Controller
             $password_repeat = null;
 
             User::find($uid)->update([
-                'scout_name' => $scout_name,
-                'first_name' => $first_name,
-                'last_name' => $last_name,
+                'scoutname' => $scout_name,
+                'firstname' => $first_name,
+                'lastname' => $last_name,
                 'email' => $email,
                 'password' => $password,
             ]);
@@ -123,9 +123,9 @@ class UsersController extends Controller
             return redirect()->back()->with('message', 'Benutzer wurde aktualisiert.');
         } elseif ($password == null) {
             User::find($uid)->update([
-                'scout_name' => $scout_name,
-                'first_name' => $first_name,
-                'last_name' => $last_name,
+                'scoutname' => $scout_name,
+                'firstname' => $first_name,
+                'lastname' => $last_name,
                 'email' => $email,
             ]);
 
