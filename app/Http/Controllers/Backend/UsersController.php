@@ -31,7 +31,7 @@ class UsersController extends Controller
                 ->orWhere('lastname', 'LIKE', "%$search_string%")->get();
         }
 
-        return view('backend.users.users', ['users' => $users]);
+        return view('backend.users.index', ['users' => $users]);
     }
 
     /**
