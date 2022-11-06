@@ -33,12 +33,19 @@
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Sales
+                            Kunden
                         </a>
 
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item {{ Request::is('admin/users/')}}" href="{{ url('/admin/users') }}">
                                 Bestellungen
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item {{ Request::is('admin/users/')}}" href="{{ url('/admin/users') }}">
+                                Kunden
+                            </a>
+                            <a class="dropdown-item {{ Request::is('admin/users/')}}" href="{{ url('/admin/users') }}">
+                                Adressen
                             </a>
                         </div>
                     </li>
@@ -62,6 +69,12 @@
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item {{ Request::is('admin/items/')}}" href="{{ url('/admin/items') }}">
                                 Farben
+                            </a>
+                            <a class="dropdown-item {{ Request::is('admin/items/')}}" href="{{ url('/admin/items') }}">
+                                Grössen
+                            </a>
+                            <a class="dropdown-item {{ Request::is('admin/items/')}}" href="{{ url('/admin/items') }}">
+                                Aufdruck
                             </a>
                         </div>
                     </li>
