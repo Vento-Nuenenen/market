@@ -16,18 +16,10 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" />
 
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
+    <!-- VITE -->
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
-    @include('layouts.nav')
-
-    <div class="container">
-        <main class="py-4">
-            @yield('content')
-        </main>
-    </div>
-
-    @yield('script')
+    @yield('index-frame')
 </body>
 </html>
