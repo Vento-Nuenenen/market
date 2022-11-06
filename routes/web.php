@@ -22,11 +22,18 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function () {
     Route::get('/overwatch', [OverwatchController::class, 'index'])->name('overwatch');
 
     Route::any('/users', [UsersController::class, 'index'])->name('users');
-    Route::get('/users/add', 'Backend\UsersController@create')->name('add-users');
-    Route::post('/users/store', 'Backend\UsersController@store')->name('store-users');
-    Route::get('/users/edit/{uid}', 'Backend\UsersController@edit')->name('edit-users');
-    Route::post('/users/update/{uid}', 'Backend\UsersController@update')->name('update-users');
-    Route::get('/users/destroy/{uid}', 'Backend\UsersController@destroy')->name('destroy-users');
+    Route::get('/users/add', [UsersController::class, 'create'])->name('add-users');
+    Route::post('/users/store', [UsersController::class, 'store'])->name('store-users');
+    Route::get('/users/edit/{uid}', [UsersController::class, 'edit'])->name('edit-users');
+    Route::post('/users/update/{uid}', [UsersController::class, 'update'])->name('update-users');
+    Route::get('/users/destroy/{uid}', [UsersController::class, 'destroy'])->name('destroy-users');
+
+    Route::any('/orders', [UsersController::class, 'index'])->name('users');
+    Route::get('/orders/add', 'Backend\UsersController@create')->name('add-users');
+    Route::post('/orders/store', 'Backend\UsersController@store')->name('store-users');
+    Route::get('/orders/edit/{uid}', 'Backend\UsersController@edit')->name('edit-users');
+    Route::post('/orders/update/{uid}', 'Backend\UsersController@update')->name('update-users');
+    Route::get('/orders/destroy/{uid}', 'Backend\UsersController@destroy')->name('destroy-users');
 
     Route::resource('profile', 'Backend\ProfileController')->only('index', 'update');
 });
