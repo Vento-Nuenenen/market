@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\Backend\ColorsController;
 use App\Http\Controllers\Backend\OrdersController;
 use App\Http\Controllers\Backend\OverwatchController;
 use App\Http\Controllers\Backend\UsersController;
+use App\Http\Controllers\Frontend\MarketController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,8 +38,15 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin'], function () {
     Route::post('/orders/update/{uid}', [OrdersController::class, 'update'])->name('update-orders');
     Route::get('/orders/destroy/{uid}', [OrdersController::class, 'destroy'])->name('destroy-orders');
 
+    Route::any('/colors', [ColorsController::class, 'index'])->name('colors');
+    Route::get('/colors/add', [ColorsController::class, 'create'])->name('add-colors');
+    Route::post('/colors/store', [ColorsController::class, 'store'])->name('store-colors');
+    Route::get('/colors/edit/{uid}', [ColorsController::class, 'edit'])->name('edit-colors');
+    Route::post('/colors/update/{uid}', [ColorsController::class, 'update'])->name('update-colors');
+    Route::get('/colors/destroy/{uid}', [ColorsController::class, 'destroy'])->name('destroy-colors');
+
     Route::resource('profile', 'Backend\ProfileController')->only('index', 'update');
 });
 
-Route::get('/', 'Frontend\MarketController@index')->name('market');
-Route::get('/market/{mid}', [App\Http\Controllers\Frontend\MarketController::class, 'show']);
+Route::get('/', [MarketController::class, 'index'])->name('market');
+Route::get('/market/{mid}', [MarketController::class, 'show']);
