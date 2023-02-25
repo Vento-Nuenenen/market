@@ -6,7 +6,8 @@ use App\Http\Controllers\Controller;
 
 class OverwatchController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         return view('backend.overwatch.overwatch');
     }
 }
