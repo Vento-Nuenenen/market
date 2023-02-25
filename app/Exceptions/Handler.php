@@ -38,6 +38,16 @@ class Handler extends ExceptionHandler
     ];
 
     /**
+     * Register the exception handling callbacks for the application.
+     */
+    public function register(): void
+    {
+        $this->reportable(function (Throwable $e) {
+            //
+        });
+    }
+
+    /**
      * Report or log an exception.
      *
      * @param  Throwable  $exception
@@ -55,17 +65,5 @@ class Handler extends ExceptionHandler
         }
 
         parent::report($exception);
-    }
-
-    /**
-     * Register the exception handling callbacks for the application.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        $this->reportable(function (Throwable $e) {
-            //
-        });
     }
 }
