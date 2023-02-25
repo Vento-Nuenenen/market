@@ -4,20 +4,13 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Color;
-use App\Models\User;
-use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Contracts\View\Factory;
-use Illuminate\Contracts\View\View;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
 
 class ColorsController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @param Request $request
      *
      * @return Application|Factory|View
      */
@@ -37,8 +30,6 @@ class ColorsController extends Controller
 
     /**
      * Show the form for creating a new resource.
-     *
-     * @return Application|Factory|View
      */
     public function create(): View|Factory|Application
     {
@@ -47,9 +38,6 @@ class ColorsController extends Controller
 
     /**
      * Store a newly created resource in storage.
-     *
-     * @param  Request  $request
-     * @return RedirectResponse
      */
     public function store(Request $request): RedirectResponse
     {
@@ -81,9 +69,6 @@ class ColorsController extends Controller
 
     /**
      * Show the form for editing the specified resource.
-     *
-     * @param $uid
-     * @return Application|Factory|View
      */
     public function edit($uid): View|Factory|Application
     {
@@ -94,10 +79,6 @@ class ColorsController extends Controller
 
     /**
      * Update the specified resource in storage.
-     *
-     * @param  Request  $request
-     * @param    $uid
-     * @return RedirectResponse
      */
     public function update(Request $request, $uid): RedirectResponse
     {
@@ -138,9 +119,6 @@ class ColorsController extends Controller
 
     /**
      * Remove the specified resource from storage.
-     *
-     * @param $uid
-     * @return RedirectResponse
      */
     public function destroy($uid): RedirectResponse
     {
