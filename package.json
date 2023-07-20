@@ -11,7 +11,7 @@
         "dropzone": "^6.0.0-beta.2",
         "font-awesome": "^4.7.0",
         "laravel-vite-plugin": "^0.7.8",
-        "sass": "^1.63.6",
+        "sass": "^1.64.0",
         "vite": "^4.4.4"
     }
 }
