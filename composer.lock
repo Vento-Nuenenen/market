@@ -66,25 +66,25 @@
         },
         {
             "name": "anhskohbo/no-captcha",
-            "version": "3.5.0",
+            "version": "3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/anhskohbo/no-captcha.git",
-                "reference": "81302b9ddfb4ee5904b66f24bf3e11ea74fa0b92"
+                "reference": "6f129419a7f0d0a1ed9849fdaaed34e6d83a03cc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/anhskohbo/no-captcha/zipball/81302b9ddfb4ee5904b66f24bf3e11ea74fa0b92",
-                "reference": "81302b9ddfb4ee5904b66f24bf3e11ea74fa0b92",
+                "url": "https://api.github.com/repos/anhskohbo/no-captcha/zipball/6f129419a7f0d0a1ed9849fdaaed34e6d83a03cc",
+                "reference": "6f129419a7f0d0a1ed9849fdaaed34e6d83a03cc",
                 "shasum": ""
             },
             "require": {
                 "guzzlehttp/guzzle": "^6.2|^7.0",
-                "illuminate/support": "^5.0|^6.0|^7.0|^8.0|^9.0|^10.0",
+                "illuminate/support": "^5.0|^6.0|^7.0|^8.0|^9.0|^10.0|^11.0",
                 "php": ">=5.5.5"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.8|^9.5.10"
+                "phpunit/phpunit": "~4.8|^9.5.10|^10.5"
             },
             "type": "library",
             "extra": {
@@ -124,9 +124,9 @@
             ],
             "support": {
                 "issues": "https://github.com/anhskohbo/no-captcha/issues",
-                "source": "https://github.com/anhskohbo/no-captcha/tree/3.5.0"
+                "source": "https://github.com/anhskohbo/no-captcha/tree/3.6.0"
             },
-            "time": "2023-02-15T16:07:08+00:00"
+            "time": "2024-03-13T02:22:17+00:00"
         },
         {
             "name": "brick/math",
