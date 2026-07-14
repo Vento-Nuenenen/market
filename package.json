@@ -10,7 +10,7 @@
         "bootstrap": "^5.3.8",
         "dropzone": "^6.0.0-beta.2",
         "font-awesome": "^4.7.0",
-        "laravel-vite-plugin": "^3.1.0",
+        "laravel-vite-plugin": "^3.1.3",
         "sass": "^1.101.0",
         "vite": "^8.1.4"
     }
