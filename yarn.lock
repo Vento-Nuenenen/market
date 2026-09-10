@@ -253,12 +253,10 @@ detect-libc@^2.0.3:
   resolved "https://registry.yarnpkg.com/detect-libc/-/detect-libc-2.1.2.tgz#689c5dcdc1900ef5583a4cb9f6d7b473742074ad"
   integrity sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==
 
-dropzone@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/dropzone/-/dropzone-6.1.0.tgz#42b14812b8fd331dcb18c0c6d9a8128ea72b1e29"
-  integrity sha512-IJ8AdVeogaN9q3SOoAmaJ3md76UkU3pI/pcnC0FkBaM78XGUI8Rf/Xqysm96yFr0b9NuFzItqJRJgO4Rl4Q8BA==
-  dependencies:
-    just-extend "^5.0.0"
+dropzone@^6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/dropzone/-/dropzone-6.2.0.tgz#2952e695622bbc971c0faf355d17bd26b5b99270"
+  integrity sha512-oL6hkyz707aiPTcaFW6iGVbYAzJsMG819lvTQ2MYw/dzF6KnYUKj+cOt0QLkRl5NmEIZwExUwN+H3KzogctpTA==
 
 dunder-proto@^1.0.1:
   version "1.0.1"
@@ -423,11 +421,6 @@ is-number@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/is-number/-/is-number-7.0.0.tgz#7535345b896734d5f80c4d06c50955527a14f12b"
   integrity sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==
-
-just-extend@^5.0.0:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/just-extend/-/just-extend-5.1.1.tgz#4f33b1fc719964f816df55acc905776694b713ab"
-  integrity sha512-b+z6yF1d4EOyDgylzQo5IminlUmzSeqR1hs/bzjBNjuGras4FXq/6TrzjxfN0j+TmI0ltJzTNlqXUMCniciwKQ==
 
 laravel-vite-plugin@^3.2.0:
   version "3.2.0"
