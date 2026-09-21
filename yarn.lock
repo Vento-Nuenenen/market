@@ -253,10 +253,10 @@ detect-libc@^2.0.3:
   resolved "https://registry.yarnpkg.com/detect-libc/-/detect-libc-2.1.2.tgz#689c5dcdc1900ef5583a4cb9f6d7b473742074ad"
   integrity sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==
 
-dropzone@^6.3.1:
-  version "6.3.1"
-  resolved "https://registry.yarnpkg.com/dropzone/-/dropzone-6.3.1.tgz#67f9f8c06b157a44c9c05de173618b753ed76e21"
-  integrity sha512-UvA9Zi9npQlng43BeARrElGIhHuoCbGt/SWbjfVXj/yFqOBoAVUBXz7dvonIW36UlBb1/EFgxSoffAEiSSQ77g==
+dropzone@^6.3.4:
+  version "6.3.4"
+  resolved "https://registry.yarnpkg.com/dropzone/-/dropzone-6.3.4.tgz#93b0978bbd3c227510450b20a0be1675dc3dcf48"
+  integrity sha512-Qlc8TE7MaP2FzKWFXCD81kf/BMaw2hVSUO7i/4ItCLQM0UHEPuZJSP78Guj2U+G+ld3C7OvV+33VJYJLhY4KLw==
 
 dunder-proto@^1.0.1:
   version "1.0.1"
